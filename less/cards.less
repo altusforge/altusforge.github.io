@@ -1,0 +1,69 @@
+@card-border-radius: 12px;
+@card-title-height: 46px;
+@card-title-top: @card-title-height / 2;
+
+
+.card {
+  background-repeat: no-repeat;
+  width: 190px;
+  height: 268px;
+  display: inline-block;
+  position: relative;
+  font-family: @font-family-elever;
+  font-weight: 300;
+
+  .top {
+    height: 50%;
+    border-top-left-radius: @card-border-radius;
+    border-top-right-radius: @card-border-radius;
+    text-align: center;
+    background: #eeb34d;
+    padding-top:8px;
+  }
+
+  .title {
+    text-align: center;
+    position: absolute;
+    left:0;
+    right:0;
+    top: ~"calc(50% - @{card-title-top})";
+    background: #f27421;
+    line-height: @card-title-height;
+    z-index: 10;
+    font-weight: 400;
+    font-size: 1.3em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  }
+
+  .bottom {
+    height:50%;
+    bottom:0;
+    left:0;
+    right:0;
+    position: absolute;
+    border-bottom-left-radius: @card-border-radius;
+    border-bottom-right-radius: @card-border-radius;
+    background: #f69020;
+    z-index: 1;
+
+  }
+
+  /*&.yellow {
+    background-image: url(../img/bg_yellow_card.png);
+  }
+  &.green {
+    background-image: url(../img/bg_green_card.png);
+  }
+  &.blue {
+    background-image: url(../img/bg_blue_card.png);
+  }
+  &.aqua {
+    background-image: url(../img/bg_aqua_card.png);
+  }
+  &.purple {
+    background-image: url(../img/bg_purple_card.png);
+  }
+  &.lightblue {
+    background-image: url(../img/bg_lightblue_card.png);
+  }*/
+}

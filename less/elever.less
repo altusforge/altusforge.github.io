@@ -1,0 +1,121 @@
+@import "../node_modules/bootstrap/less/variables.less";
+
+// customized bootstrap
+@import "variables.less";
+@import "custom_bootstrap.less";
+
+// elever mixins
+@import "mixins.less";
+@import "flex.less";
+
+// cloned from bootstrap
+@import "navbar.less";
+
+// elever stuff
+@import "cards.less";
+@import "navigation.less";
+@import "content.less";
+
+// Global Components
+html,
+body {
+  height: 100%;
+  min-width: 100%;
+}
+body {
+  padding-top: @navbar-height;
+}
+a {
+  .transition-all;
+  /*color: white;
+  &:hover,
+  &:focus {
+    color: darken(white, 10%);
+    text-decoration: none;
+  }*/
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-family: @font-family-elever;
+  font-weight: 400;
+  color: @font-green;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+section {
+  position: relative;
+  min-height: 100%;
+  border-style: solid;
+  border-width: 0 0 40px;
+  border-image: url(../img/bg_texture_color03.png) 0 0 40 fill round repeat;
+  background-image: url(../img/bg_items_texture.png);
+  background-repeat: repeat-x;
+  background-position: 0 -130px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media (min-width: @container-desktop) {
+    padding-left: @content-side-padding;
+    padding-right: @content-side-padding;
+  }
+  @media (min-width: @container-large-desktop) {
+    padding-left: @content-side-padding-percentag;
+    padding-right: @content-side-padding-percentag;
+  }
+  @media (min-width: @container-desktop) {
+    .flex-display();
+    .flex-direction();
+    > div {
+      .flex-display();
+      .flex-direction();
+      > div {
+        .flex-display();
+        .flex-direction();
+      }
+    }
+  }
+}
+.vertical-center {
+  @media (min-width: @container-desktop) {
+    .flex-display();
+    .flex-direction();
+    .align-items(center);
+  }
+}
+
+// Extras
+// -- Highlight Color Customization
+/*::-moz-selection {
+  color: white;
+  text-shadow: none;
+  background: @theme-dark;
+}
+
+::selection {
+  color: white;
+  text-shadow: none;
+  background: @theme-dark;
+}
+
+img::selection {
+  color: white;
+  background: transparent;
+}
+
+img::-moz-selection {
+  color: white;
+  background: transparent;
+}
+
+body {
+  webkit-tap-highlight-color: @theme-dark;
+}*/
