@@ -1,8 +1,6 @@
 @card-border-radius: 12px;
-@card-title-height: 46px;
+@card-title-height: 48px;
 @card-title-top: @card-title-height / 2;
-
-
 .card-container {
   .flex-display();
   .flex-direction(row);
@@ -11,7 +9,6 @@
     z-index: 100;
   }
 }
-
 .card {
   background-repeat: no-repeat;
   width: 190px;
@@ -21,20 +18,18 @@
   font-family: @font-family-elever;
   font-weight: 300;
   text-align: center;
-
-
-  .top {
+  .top,
+  &.card-small .bottom {
     height: 50%;
     border-top-left-radius: @card-border-radius;
     border-top-right-radius: @card-border-radius;
     background: #eeb34d;
-    padding-top:8px;
+    padding-top: 8px;
   }
-
   .title {
     position: absolute;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
     top: ~"calc(50% - @{card-title-top})";
     line-height: @card-title-height;
     z-index: 10;
@@ -46,14 +41,13 @@
     background: url(../img/bg_orange_stripe_drop.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
   }
-
   .bottom {
-    height:50%;
-    bottom:0;
-    left:0;
-    right:0;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
     position: absolute;
     border-bottom-left-radius: @card-border-radius;
     border-bottom-right-radius: @card-border-radius;
@@ -61,36 +55,54 @@
     z-index: 1;
     font-size: 0.9em;
     padding: 25px 5px 4px;
-
   }
-
+  &.card-small {
+    height: 180px;
+    .bottom {
+      padding-top: 66px;
+    }
+    &.card-small .title {
+      top: 9px;
+    }
+    &.card-small .bottom {
+      height: 100%;
+    }
+  }
   &.green {
     .top {
-      background-color: #88c663
+      background-color: #88c663;
     }
     .title {
-      background: url(../img/bg_green_stripe_drop.png);
+      background-image: url(../img/bg_green_stripe_drop.png);
     }
     .bottom {
-      background-color: #219249
+      background-color: #219249;
     }
   }
   &.blue {
     .top {
-      background-color: #2377bf
+      background-color: #2377bf;
     }
     .title {
-      background: url(../img/bg_blue_stripe_drop.png);
+      background-image: url(../img/bg_blue_stripe_drop.png);
     }
     .bottom {
-      background-color: #2b4879
+      background-color: #2b4879;
+    }
+  }
+  &.purple {
+    .top {
+      background-color: #8f81bc;
+    }
+    .title {
+      background-image: url(../img/bg_lightpurple_stripe_drop.png);
+    }
+    .bottom {
+      background-color: #6b629b;
     }
   }
   &.aqua {
     background-image: url(../img/bg_aqua_card.png);
-  }
-  &.purple {
-    background-image: url(../img/bg_purple_card.png);
   }
   &.lightblue {
     background-image: url(../img/bg_lightblue_card.png);

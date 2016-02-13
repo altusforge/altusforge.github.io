@@ -7,6 +7,18 @@
     font-size: 20px;
   }
 }
+.highlight {
+  padding: 5px 10px 0px;
+  font-family: @font-family-elever;
+  font-weight: 400;
+  font-size: 1.4em;
+  &.aqua {
+    background: #1d6b7e;
+  }
+  &.purple {
+    background: #56567e;
+  }
+}
 section#about {
   background-color: #1a6778;
   h1 {
@@ -21,5 +33,26 @@ section#about {
     span {
       background-color: @navbar-default-bg;
     }
+  }
+}
+section#method {
+  background-color: #27827d;
+  h2 {
+    color: #cbc7e3;
+  }
+  .row-self-motivation {
+    margin-top: 50px;
+    .self-motivation-title {
+      margin-bottom: 10px;
+    }
+  }
+}
+section#features {
+  background-color: #56567e;
+}
+section#system {
+  background-color: #3f6caf;
+  .card-container {
+    background-img: url(img/ic_graphic04.png);
   }
 }
