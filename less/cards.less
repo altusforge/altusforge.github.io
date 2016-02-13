@@ -25,6 +25,7 @@
     border-top-right-radius: @card-border-radius;
     background: #eeb34d;
     padding-top: 8px;
+    position: relative;
   }
   .title {
     position: absolute;
@@ -102,9 +103,25 @@
     }
   }
   &.aqua {
-    background-image: url(../img/bg_aqua_card.png);
+    .top {
+      background-color: #09b9b7;
+    }
+    .title {
+      background-image: url(../img/bg_aqua_stripe_drop.png);
+    }
+    .bottom {
+      background-color: #0fa2aa;
+    }
   }
   &.lightblue {
-    background-image: url(../img/bg_lightblue_card.png);
+    .top {
+      background-color: #47aee2;
+    }
+    .title {
+      background-image: url(../img/bg_lightblue_stripe_drop.png);
+    }
+    .bottom {
+      background-color: #1b98d0;
+    }
   }
 }
