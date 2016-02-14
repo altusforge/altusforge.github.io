@@ -70,23 +70,35 @@ section {
   }
   @media (min-width: @grid-float-breakpoint) {
     .flex-display();
-    .flex-direction();
+    .flex-direction(column);
+    .justify-content(space-around);
     > div {
       .flex-display();
-      .flex-direction();
+      .flex-direction(column);
+      .justify-content(space-around);
       > div {
         .flex-display();
         .flex-direction();
+        .justify-content(space-around);
       }
     }
   }
 }
-.vertical-center {
-  @media (min-width: @grid-float-breakpoint) {
+@media (min-width: @grid-float-breakpoint) {
+  .container-fluid {
+    margin-right: inherit !important;
+    margin-left: inherit !important;
+  }
+
+  .vertical-center {
     .flex-display();
     .flex-direction(column);
     .justify-content(space-around);
   }
+}
+
+.form-group label {
+  padding-left: 8px;
 }
 
 // Extras
