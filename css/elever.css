@@ -6463,11 +6463,13 @@ button.close {
   margin-bottom: 21px;
   border: 1px solid transparent;
   text-transform: uppercase;
+  padding-left: 7px;
+  padding-right: 7px;
 }
-@media (min-width: 768px) {
+@media (min-width: 948px) {
   .navbar {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-radius: 4px;
   }
 }
@@ -6484,8 +6486,8 @@ button.close {
 }
 .navbar-collapse {
   overflow-x: visible;
-  padding-right: -10px;
-  padding-left: -10px;
+  padding-right: 4px;
+  padding-left: 4px;
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch;
@@ -6529,8 +6531,8 @@ button.close {
 .container-fluid > .navbar-header,
 .container > .navbar-collapse,
 .container-fluid > .navbar-collapse {
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: -4px;
+  margin-left: -4px;
 }
 @media (min-width: 768px) {
   .container > .navbar-header,
@@ -6574,7 +6576,7 @@ button.close {
 }
 .navbar-brand {
   float: left;
-  padding: 10px -10px;
+  padding: 10px 4px;
   font-size: 19px;
   line-height: 21px;
   height: 80px;
@@ -6589,13 +6591,13 @@ button.close {
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
-    margin-left: 10px;
+    margin-left: -4px;
   }
 }
 .navbar-toggle {
   position: relative;
   float: right;
-  margin-right: -10px;
+  margin-right: 4px;
   padding: 9px 10px;
   margin-top: 23px;
   margin-bottom: 23px;
@@ -6622,11 +6624,13 @@ button.close {
   }
 }
 .navbar-nav {
-  margin: 5px 10px;
+  margin: 5px -4px;
 }
 .navbar-nav > li > a {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 23px;
+  padding-right: 23px;
   line-height: 21px;
   border-radius: 15px;
 }
@@ -6659,16 +6663,19 @@ button.close {
   }
   .navbar-nav > li {
     float: left;
+    margin-left: 10px;
   }
   .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /*padding-top:    @navbar-padding-vertical;
+        padding-bottom: @navbar-padding-vertical;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 .navbar-form {
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 10px -10px;
+  margin-left: -4px;
+  margin-right: -4px;
+  padding: 10px 4px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -6777,8 +6784,8 @@ button.close {
 @media (min-width: 768px) {
   .navbar-text {
     float: left;
-    margin-left: -10px;
-    margin-right: -10px;
+    margin-left: 4px;
+    margin-right: 4px;
   }
 }
 @media (min-width: 768px) {
@@ -6787,7 +6794,7 @@ button.close {
   }
   .navbar-right {
     float: right !important;
-    margin-right: 10px;
+    margin-right: -4px;
   }
   .navbar-right ~ .navbar-right {
     margin-right: 0;
@@ -7259,11 +7266,6 @@ img {
   max-height: 100%;
   object-fit: contain;
 }
-@media (min-width: 768px) {
-  .navbar-nav {
-    margin-left: 60px;
-  }
-}
 section {
   position: relative;
   min-height: 100%;
@@ -7276,8 +7278,8 @@ section {
 }
 @media (min-width: 948px) {
   section {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 @media (min-width: 1148px) {
@@ -7286,7 +7288,7 @@ section {
     padding-right: 4%;
   }
 }
-@media (min-width: 948px) {
+@media (min-width: 768px) {
   section {
     display: -webkit-flex;
     display: -moz-flex;
@@ -7321,7 +7323,7 @@ section {
     flex-direction: row;
   }
 }
-@media (min-width: 948px) {
+@media (min-width: 768px) {
   .vertical-center {
     display: -webkit-flex;
     display: -moz-flex;

@@ -18,7 +18,10 @@
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
 
-  @media (min-width: @grid-float-breakpoint) {
+  padding-left: 7px;
+  padding-right: 7px;
+
+  @media (min-width: @container-desktop) {
     padding-left: @content-side-padding;
     padding-right: @content-side-padding;
     border-radius: @navbar-border-radius;
@@ -241,8 +244,10 @@
   margin: (@navbar-padding-vertical / 2) -@navbar-padding-horizontal;
 
   > li > a {
-    padding-top:    10px;
-    padding-bottom: 10px;
+    padding-top:    5px;
+    padding-bottom: 5px;
+    padding-left: 23px;
+    padding-right: 23px;
     line-height: @line-height-computed;
     border-radius: @navitem-border-radius;
   }
@@ -278,9 +283,12 @@
 
     > li {
       float: left;
+      margin-left: 10px;
       > a {
-        padding-top:    @navbar-padding-vertical;
-        padding-bottom: @navbar-padding-vertical;
+        /*padding-top:    @navbar-padding-vertical;
+        padding-bottom: @navbar-padding-vertical;*/
+        padding-top:    5px;
+        padding-bottom: 5px;
       }
     }
   }
