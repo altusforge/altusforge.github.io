@@ -1,11 +1,20 @@
+.text-right {
+  text-align: left;
+  @media (min-width: @grid-float-breakpoint) {
+    text-align: right;
+  }
+}
 .shaped {
   margin-bottom: 15px;
 
   //transform: skewX(0.5deg) skewY(-0.5deg);
   //transform-origin: right;
   span {
-    padding: 6px 12px 1px;
     font-size: 20px;
+    padding: 6px 3px 1px;
+    @media (min-width: @grid-float-breakpoint) {
+      padding: 6px 12px 1px;
+    }
   }
 }
 .highlight {
@@ -22,7 +31,6 @@
   &.darkpurple {
     background: #3f386e;
   }
-
 }
 section#about {
   background-color: #1a6778;
@@ -34,7 +42,7 @@ section#about {
     margin-bottom: 35px;
   }
   .shaped {
-    color: #156362;
+    color: #051D1C;
     margin-top: 20px;
     span {
       background-color: @navbar-default-bg;
@@ -74,13 +82,23 @@ section#system {
   h2 {
     color: #fff;
   }
-  .shaped span{
+  .shaped span {
     background-color: #0fa2aa;
     color: #a0e9ed;
   }
   background-color: #3f6caf;
   .card-container {
+    .justify-content(space-around);
+
+    background-image: url('../img/ic_graphic04.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
+    width: 100%;
+    img {
+      height: 85%;
+    }
     .card-container-bg {
       text-align: center;
       position: absolute;
@@ -92,29 +110,29 @@ section#system {
         max-height: inherit;
       }
     }
-    padding-top: 130px;
-    .justify-content(space-around);
-    width: 100%;
-    .card.aqua,
-    .card.green {
-      position: relative;
-      top: 30px;
-    }
-    .card .top img {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 22px;
-      max-height: inherit;
-      z-index: 5;
+    @media (min-width: @grid-float-breakpoint) {
+      padding-top: 130px;
+
+      .card.aqua,
+      .card.green {
+        position: relative;
+        top: 30px;
+      }
+      .card .top img {
+        height: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 22px;
+        max-height: inherit;
+        z-index: 5;
+      }
     }
   }
 }
-
 section#contact {
   background-color: #5da24a;
   h1 {
     color: #c9e094;
   }
-
 }

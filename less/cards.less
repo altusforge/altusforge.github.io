@@ -3,21 +3,27 @@
 @card-title-top: @card-title-height / 2;
 .card-container {
   .flex-display();
-  .flex-direction(row);
+  .flex-direction(column);
   .justify-content(flex-end);
+  .align-items(center);
+  @media (min-width: @grid-float-breakpoint) {
+    .flex-direction(row);
+  }
   img {
     z-index: 100;
   }
 }
 .card {
+  font-family: @font-family-elever;
   background-repeat: no-repeat;
   width: 190px;
   height: 268px;
   display: inline-block;
   position: relative;
-  font-family: @font-family-elever;
   font-weight: 300;
   text-align: center;
+  margin-top:10px;
+  margin-bottom: 10px;
   .top,
   &.card-small .bottom {
     height: 50%;
