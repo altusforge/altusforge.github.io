@@ -3565,7 +3565,7 @@ tbody.collapse.in {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #fff;
-  background-color: #24918a;
+  background-color: #1e5b77;
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -3590,7 +3590,7 @@ tbody.collapse.in {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #24918a;
+  background-color: #1e5b77;
   color: #fff;
 }
 @media (max-width: 767px) {
@@ -3606,7 +3606,7 @@ tbody.collapse.in {
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #fff;
-    background-color: #24918a;
+    background-color: #1e5b77;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -4146,6 +4146,22 @@ section {
 }
 .form-group label {
   padding-left: 8px;
+}
+.active.method > a,
+.method > a:hover {
+  background-color: #257a75 !important;
+}
+.active.features > a,
+.features > a:hover {
+  background-color: #4e4e73 !important;
+}
+.active.system > a,
+.system > a:hover {
+  background-color: #405b9c !important;
+}
+.active.contact > a,
+.contact > a:hover {
+  background-color: #178c59 !important;
 }
 /*::-moz-selection {
   color: white;
