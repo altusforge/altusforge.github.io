@@ -208,7 +208,7 @@ body {
   font-family: 'Maven Pro', Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.42857143;
-  color: #DDD;
+  color: #F3F3F3;
   background-color: #fff;
 }
 input,
@@ -3874,6 +3874,20 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .card.lightblue .bottom {
   background-color: #1b98d0;
 }
+.next-page {
+  position: absolute;
+  bottom: 5px;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+section.active .next-page {
+  opacity: 0.8;
+}
+section.active .next-page:hover {
+  opacity: 1;
+}
 .text-right {
   text-align: left;
 }
@@ -3881,6 +3895,10 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   .text-right {
     text-align: right;
   }
+}
+.subtitle {
+  margin-top: 15px;
+  font-size: 1.3em;
 }
 .shaped {
   margin-bottom: 15px;
@@ -4055,7 +4073,7 @@ img {
 section {
   position: relative;
   min-height: 100%;
-  margin-bottom: -20px;
+  margin-bottom: -30px;
   background-image: url(../img/bg_items_texture.png);
   background-repeat: repeat-x;
   background-position: 0 -130px;
@@ -4092,7 +4110,7 @@ section {
     -ms-justify-content: space-around;
     justify-content: space-around;
   }
-  section > div {
+  section > div.container-fluid {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
@@ -4107,7 +4125,7 @@ section {
     -ms-justify-content: space-around;
     justify-content: space-around;
   }
-  section > div > div {
+  section > div.container-fluid > div {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;

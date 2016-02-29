@@ -23,17 +23,21 @@
         offset: 100
     });
 
+    $('body').on('activate.bs.scrollspy', function (e) {
+      setActiveSession(e.target.lastElementChild.hash);
+    });
+
+    function setActiveSession(_hash) {
+      $('section').removeClass('active');
+      $('section' + _hash).addClass('active');
+    }
+
+    setActiveSession($('li.active a').attr('href'));
+
     // Closes the Responsive Menu on Menu Item Click
     $('.navbar-collapse ul li a').click(function() {
         $('.navbar-toggle:visible').click();
     });
-
-    // Offset for Main Navigation
-    /*$('#mainNav').affix({
-        offset: {
-            top: 200
-        }
-    });*/
 
     // Initialize WOW.js Scrolling Animations
     new WOW().init();

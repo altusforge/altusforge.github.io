@@ -1,8 +1,29 @@
+.next-page {
+  position: absolute;
+  bottom: 5px;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+
+section.active .next-page {
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 .text-right {
   text-align: left;
   @media (min-width: @grid-float-breakpoint) {
     text-align: right;
   }
+}
+.subtitle {
+  margin-top: 15px;
+  font-size: 1.3em;
 }
 .shaped {
   margin-bottom: 15px;
